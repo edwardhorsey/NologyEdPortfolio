@@ -38,8 +38,8 @@ body {
     background-attachment: fixed;
     color: #242221;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
 }
 
 header {

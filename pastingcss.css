@@ -1,0 +1,168 @@
+/* ----------------- */
+
+
+/* media queries */
+
+
+/* ----------------- */
+
+@media screen and (max-width: 1875px) {
+    main {
+        padding: 0 10%;
+    }
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 210px;
+        width: 315px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    header {}
+    header h1 {
+        font-size: 25px;
+    }
+    .about-me-grid {
+        margin: 0 40px;
+    }
+    main {
+        margin-top: 100px;
+    }
+    main h2 {
+        margin: 10px;
+        padding: 10px 0;
+        font-size: 25px;
+    }
+    section div.wrappertop {
+        height: 500px;
+    }
+    .about-me div,
+    .projects-box,
+    .skills li,
+    .contact-me,
+    footer {
+        font-size: 14px;
+    }
+    /* project text and links becomes visable */
+    .project-text {
+        display: block;
+    }
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 170px;
+        width: 255px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* !! horizontal scroll stops and page becomes vertical scroll !! */
+    /* nav bar items need to jump to part of the page now rather than hide / unhide material */
+    /* nav bar smaller */
+    /* h1 */
+    header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    header h1 br {
+        height: 100%;
+        width: 100%;
+        /* displ
+        
+        ay: inline;
+    }
+    main { */
+        margin-top: 80px;
+        padding: 0 4%;
+    }
+    main h2 {
+        margin: 8px;
+        padding: 8px 0;
+        font-size: 20px;
+    }
+    /* height of sections disappears */
+    section div.wrappertop {
+        height: 100%;
+    }
+    /* general fonts smaller  */
+    .about-me div,
+    .projects-box,
+    .skills li,
+    .contact-me,
+    footer {
+        font-size: 14px;
+    }
+    /* about me p */
+    .about-me-grid {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    /* icon bar arrows disappear */
+    .icons-bar li.left,
+    .icons-bar li.right {
+        display: none;
+    }
+    .about-me .icons-bar,
+    .contact-me .icons-bar {
+        display: none;
+    }
+    /* ---------- */
+    /* project pictures stack vertically */
+    .boxesrow {
+        display: inline-block;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+    }
+    .boxesrow p {
+        top: 10px;
+    }
+    /* ------------- */
+    footer {
+        margin-top: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        position: static;
+    }
+    #about-me,
+    #contact-me,
+    #projects,
+    #skills {
+        scroll-margin-top: 5px;
+    }
+    header ul {
+        white-space: normal;
+        display: block;
+        padding: 5px
+    }
+    header ul li {
+        display: block;
+        font-size: 14px;
+    }
+    main {
+        margin-top: auto;
+        padding: 0 3%;
+    }
+    .about-me-grid div img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    main {
+        padding: 0 0;
+    }
+}

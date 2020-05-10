@@ -1,7 +1,8 @@
 clearing some browser settings h1,
 h2,
 ul,
-li {
+li,
+body {
     margin: 0px;
     padding: 0px;
 }
@@ -23,32 +24,32 @@ html {
 
 /* main CSS */
 
+html,
+body {
+    width: 100vw;
+    height: 100vw;
+    margin: 0px;
+}
+
 body {
     background-image: url(imgs/edit8.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0px;
-    padding: 0px;
     color: #242221;
-    text-decoration: #e3b674;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 90% 5%;
 }
 
 header {
     display: grid;
-    opacity: 95%;
+    width: 100vw;
+    overflow: hidden;
     grid-template-columns: auto auto;
     background-color: white;
-    /* background bluy color: */
-    /* background-color: #7d99b1; */
-    position: fixed;
-    top: 0px;
-    margin: 0, auto;
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* margin: 10%; */
+    /* position: fixed; */
 }
 
 header ul {
@@ -82,11 +83,14 @@ header h1 br {
 }
 
 main {
-    padding: 0 15%;
     text-align: center;
-    /* margin-top: 110px; */
-    margin-top: 120px;
-    margin-bottom: 20px;
+    /* margin-top: 120px; */
+    /* margin-bottom: 20px; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 100vw;
+    overflow-x: scroll;
 }
 
 main h2 {
@@ -98,15 +102,16 @@ main h2 {
 }
 
 section {
-    margin: 8px;
-    padding: 5px;
+    /* margin: 8px; */
+    /* padding: 5px; */
     background-color: rgba(184, 175, 175, 0.40);
     border-radius: 20px;
 }
 
-section div.wrappertop {
+
+/* section div.wrappertop {
     height: 560px;
-}
+} */
 
 .about-me-grid {
     display: grid;
@@ -285,185 +290,4 @@ footer {
 
 .icons-bar a :hover {
     transform: scale(1.2);
-}
-
-
-/* keyframes */
-
-@keyframes fadeoutleft {
-    keyframes-selector {}
-}
-
-@keyframes fadeinright {
-    keyframes-selector {}
-}
-
-
-/* ----------------- */
-
-
-/* media queries */
-
-
-/* ----------------- */
-
-@media screen and (max-width: 1875px) {
-    main {
-        padding: 0 10%;
-    }
-    #leftboxtop,
-    #leftboxbottom,
-    #rightboxtop,
-    #rightboxbottom {
-        height: 210px;
-        width: 315px;
-    }
-}
-
-@media screen and (max-width: 1030px) {
-    header {}
-    header h1 {
-        font-size: 25px;
-    }
-    .about-me-grid {
-        margin: 0 40px;
-    }
-    main {
-        margin-top: 100px;
-    }
-    main h2 {
-        margin: 10px;
-        padding: 10px 0;
-        font-size: 25px;
-    }
-    section div.wrappertop {
-        height: 500px;
-    }
-    .about-me div,
-    .projects-box,
-    .skills li,
-    .contact-me,
-    footer {
-        font-size: 14px;
-    }
-    /* project text and links becomes visable */
-    .project-text {
-        display: block;
-    }
-    #leftboxtop,
-    #leftboxbottom,
-    #rightboxtop,
-    #rightboxbottom {
-        height: 170px;
-        width: 255px;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    /* !! horizontal scroll stops and page becomes vertical scroll !! */
-    /* nav bar items need to jump to part of the page now rather than hide / unhide material */
-    /* nav bar smaller */
-    /* h1 */
-    header {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    header h1 {
-        font-size: 20px;
-    }
-    header h1 br {
-        height: 100%;
-        width: 100%;
-        /* displ
-        
-        ay: inline;
-    }
-    main { */
-        margin-top: 80px;
-        padding: 0 4%;
-    }
-    main h2 {
-        margin: 8px;
-        padding: 8px 0;
-        font-size: 20px;
-    }
-    /* height of sections disappears */
-    section div.wrappertop {
-        height: 100%;
-    }
-    /* general fonts smaller  */
-    .about-me div,
-    .projects-box,
-    .skills li,
-    .contact-me,
-    footer {
-        font-size: 14px;
-    }
-    /* about me p */
-    .about-me-grid {
-        display: grid;
-        grid-template-columns: auto;
-        text-align: center;
-    }
-    /* icon bar arrows disappear */
-    .icons-bar li.left,
-    .icons-bar li.right {
-        display: none;
-    }
-    .about-me .icons-bar,
-    .contact-me .icons-bar {
-        display: none;
-    }
-    /* ---------- */
-    /* project pictures stack vertically */
-    .boxesrow {
-        display: inline-block;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        padding: 0px;
-    }
-    .boxesrow p {
-        top: 10px;
-    }
-    /* ------------- */
-    footer {
-        margin-top: 10px;
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        position: static;
-    }
-    #about-me,
-    #contact-me,
-    #projects,
-    #skills {
-        scroll-margin-top: 5px;
-    }
-    header ul {
-        white-space: normal;
-        display: block;
-        padding: 5px
-    }
-    header ul li {
-        display: block;
-        font-size: 14px;
-    }
-    main {
-        margin-top: auto;
-        padding: 0 3%;
-    }
-    .about-me-grid div img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    main {
-        padding: 0 0;
-    }
 }

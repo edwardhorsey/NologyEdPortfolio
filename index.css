@@ -13,6 +13,7 @@ li {
 
 html {
     scroll-behavior: smooth;
+    transition: scroll-behavior 1s;
 }
 
 #about-me,
@@ -51,6 +52,7 @@ header {
     padding-right: 5%;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 100;
 }
 
 header ul {
@@ -104,6 +106,7 @@ section {
     padding: 5px;
     background-color: rgba(184, 175, 175, 0.40);
     border-radius: 20px;
+    height: 90vh;
 }
 
 section div.wrappertop {

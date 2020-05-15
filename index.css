@@ -107,7 +107,7 @@
         grid-auto-flow: column;
         grid-auto-columns: 100vw;
         padding: 0;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     
     main h2 {
@@ -398,6 +398,9 @@
         }
         /* ---------- */
         /* project pictures stack vertically */
+        .projects-box {
+            font-size: 12px;
+        }
         .boxesrow {
             display: inline-block;
             flex-direction: column;

@@ -6,6 +6,8 @@
 
 /* ----------------- */
 
+
+/* 
 @media screen and (max-width: 1875px) {
     main {
         padding: 0 10%;
@@ -17,7 +19,7 @@
         height: 210px;
         width: 315px;
     }
-}
+} */
 
 @media screen and (max-width: 1030px) {
     header {}

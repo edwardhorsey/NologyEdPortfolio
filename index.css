@@ -1,472 +1,445 @@
-    /* first commit */
-    
-    clearing some browser settings h1,
-    h2,
-    ul,
-    li,
-    {
-        margin: 0px;
-        padding: 0px;
-    }
-    /* scrolling behaviour */
-    
-    html {
-        scroll-behavior: smooth;
-    }
-    
+/* first commit */
+
+clearing some browser settings h1,
+h2,
+ul,
+li,
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* scrolling behaviour */
+
+
+/*     
     #about-me,
     #contact-me,
     #projects,
     #skills {
         scroll-margin-top: 85px;
+    } */
+
+
+/* main CSS */
+
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainblock {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image: url(imgs/edit8.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: #242221;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    height: 97vh;
+}
+
+header {
+    display: grid;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    overflow: hidden;
+    grid-template-columns: auto auto;
+    background-color: white;
+}
+
+header ul {
+    white-space: nowrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header li {
+    display: inline;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+}
+
+header h1 {
+    font-size: 30px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.centerbody {
+    width: 100vw;
+}
+
+main {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 100vw;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+
+main h2 {
+    margin: 8px;
+    padding: 8px;
+    font-size: 28px;
+    text-align: right;
+}
+
+section {
+    scroll-snap-align: center;
+}
+
+section div.wrapper {
+    background-color: rgba(184, 175, 175, 0.40);
+    border-radius: 20px;
+    margin: 0 10%;
+    vertical-align: middle;
+}
+
+section div.wrappertop {
+    height: 60vh;
+}
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    text-align: left;
+    margin: 5% 13%;
+}
+
+.projects-box {
+    display: block;
+    /* font-size: 15px; */
+    line-height: 1.5em;
+}
+
+.boxesrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px
+}
+
+.boxesrow p {
+    width: 80%;
+    color: white;
+    text-align: left;
+    left: 10px;
+    position: relative
+}
+
+.boxesrow p a {
+    text-decoration: none;
+    color: white;
+    line-height: 1.4em;
+}
+
+#leftboxtop {
+    background-image: url("imgs/600900p1.jpg");
+    height: 230px;
+    width: 345px;
+    background-size: cover;
+}
+
+#rightboxtop {
+    background-image: url("imgs/600900p2.jpg");
+    height: 230px;
+    width: 345px;
+    background-size: cover;
+}
+
+#leftboxbottom {
+    background-image: url("imgs/600900p3.jpeg");
+    height: 230px;
+    width: 345px;
+    background-size: cover;
+}
+
+#rightboxbottom {
+    background-image: url("imgs/600900p4.jpg");
+    height: 230px;
+    width: 345px;
+    background-size: cover;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    margin: 30px;
+}
+
+.icons-bar ul {
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 8px;
+    margin: 8px;
+}
+
+.icons-bar li {
+    width: 33%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.icons-bar li.left {
+    text-align: left;
+}
+
+.icons-bar li.center {
+    text-align: center;
+}
+
+.icons-bar li.right {
+    text-align: right;
+}
+
+.skills li {
+    list-style-type: none;
+}
+
+.front-end {
+    text-align: right;
+}
+
+.back-end {
+    text-align: left;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    text-shadow: #524c46;
+    margin: 5px;
+    border: 2px solid #7d99b1;
+    ;
+    ;
+    border-radius: 5px;
+}
+
+form .submit {
+    text-align: center;
+}
+
+footer {
+    background-color: #7d99b1;
+    ;
+    /* opacity: 97%; */
+    padding: 0.5%;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+}
+
+
+/* pseudo classes */
+
+.navigation :hover {
+    background-color: #e3b674;
+    border-radius: 30em;
+}
+
+.project-text :hover {
+    /* display: block; */
+}
+
+.boxesrow p :hover {
+    background-color: #e3b674;
+    border-radius: 5em;
+}
+
+.icons-bar a :hover {
+    transform: scale(1.2);
+}
+
+
+/* media queries */
+
+@media (pointer:coarse) {
+    main {
+        overflow-x: scroll;
+        /* could also do hidden... not sure */
     }
-    /* main CSS */
-    
-    html,
-    body {
-        margin: 0px;
-        padding: 0px;
+}
+
+@media screen and (max-width: 1375px) {
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 210px;
+        width: 315px;
     }
-    
+}
+
+@media screen and (max-height: 780px) {
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 170px;
+        width: 255px;
+    }
+    .projects-box {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 630px) {
+    .about-me p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 950px) {
     .mainblock {
-        margin: 0px;
-        padding: 0px;
-        font-size: 15px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
     }
-    
-    body {
-        background-image: url(imgs/edit8.jpg);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        color: #242221;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
-        height: 97vh;
-    }
-    
-    header {
-        display: grid;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        overflow: hidden;
-        grid-template-columns: auto auto;
-        background-color: white;
-    }
-    
-    .headerdiv {
-        /* width: 100vw; */
-        /* max-width: 1000px; */
-        display: block;
-    }
-    
-    header ul {
-        white-space: nowrap;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    
-    header li {
-        display: inline;
-        padding: 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    h2 {
         font-size: 20px;
     }
-    
-    header li a {
-        text-decoration: none;
-        color: black;
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 180px;
+        width: 270px;
     }
-    
+}
+
+@media screen and (max-width: 800px) {
+    /* !! horizontal scroll stops and page becomes vertical scroll !! */
+    /* nav bar smaller */
+    header .navigation a {
+        font-size: 16px;
+    }
     header h1 {
-        font-family: Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        text-align: right;
-        margin-right: 20px;
+        font-size: 20px;
     }
-    
-    header h1 br {
-        display: none;
-    }
-    
-    .centerbody {
-        display: block;
-        width: 100vw;
-        /* height: 90vh; */
-        /* maybe i don't need .... */
-    }
-    
     main {
-        text-align: center;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-auto-flow: column;
-        grid-auto-columns: 100vw;
-        padding: 0;
-        /* overflow-x: hidden; */
+        display: block;
+        margin-top: 60px;
     }
-    
     main h2 {
-        font-family: Geneva, Tahoma, sans-serif;
         margin: 8px;
-        padding: 8px;
-        font-size: 30px;
-        text-align: right;
+        padding: 8px 0;
+        font-size: 20px;
     }
-    
-    section {
-        scroll-snap-align: center;
-        /* line-height: 1.2em; */
-    }
-    
-    section div.wrapper {
-        background-color: rgba(184, 175, 175, 0.40);
-        border-radius: 20px;
-        margin: 0 10%;
-        vertical-align: middle;
-    }
-    
+    /* height of sections disappears */
     section div.wrappertop {
-        height: 60vh;
+        height: 100%;
     }
-    
     .about-me-grid {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 10px;
-        text-align: left;
-        margin: 5% 13%;
-    }
-    
-    .about-me div {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    .projects-box {
-        display: block;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        /* font-size: 15px; */
-        line-height: 1.5em;
-    }
-    
-    .boxesrow {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 10px
-    }
-    
-    .boxesrow p {
-        width: 80%;
-        color: white;
-        text-align: left;
-        left: 10px;
-        position: relative
-    }
-    
-    .boxesrow p a {
-        text-decoration: none;
-        color: white;
-        line-height: 1.4em;
-    }
-    
-    #leftboxtop {
-        background-image: url("imgs/600900p1.jpg");
-        height: 230px;
-        width: 345px;
-        background-size: cover;
-        /* padding: 5px; */
-    }
-    
-    #rightboxtop {
-        background-image: url("imgs/600900p2.jpg");
-        height: 230px;
-        width: 345px;
-        background-size: cover;
-        /* padding: 5px; */
-    }
-    
-    #leftboxbottom {
-        background-image: url("imgs/600900p3.jpeg");
-        height: 230px;
-        width: 345px;
-        background-size: cover;
-        /* padding: 5px; */
-    }
-    
-    #rightboxbottom {
-        background-image: url("imgs/600900p4.jpg");
-        height: 230px;
-        width: 345px;
-        background-size: cover;
-        /* padding: 5px; */
-    }
-    
-    .skills-grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 20px;
-        margin: 30px;
-    }
-    
-    .icons-bar ul {
-        white-space: nowrap;
-        margin: 0 auto;
-        padding: 8px;
-        margin: 8px;
-    }
-    
-    .icons-bar li {
-        width: 33%;
-        display: inline-block;
-        font-size: 20px;
-    }
-    
-    .icons-bar li.left {
-        text-align: left;
-    }
-    
-    .icons-bar li.center {
+        grid-template-columns: auto;
         text-align: center;
+        margin: 0% 10%
     }
-    
+    /* icon bar arrows disappear */
+    .icons-bar li.left,
     .icons-bar li.right {
-        text-align: right;
+        display: none;
     }
-    
-    .skills li {
-        list-style-type: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .about-me .icons-bar,
+    .contact-me .icons-bar {
+        display: none;
     }
-    
-    .front-end {
-        text-align: right;
+    /* ---------- */
+    /* project pictures stack vertically */
+    .projects-box {
+        font-size: 12px;
     }
-    
-    .back-end {
-        text-align: left;
-    }
-    
-    .contact-me {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    form {
+    .boxesrow {
         display: inline-block;
-        text-align: left;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
     }
-    
-    form input,
-    form textarea {
-        text-shadow: #524c46;
-        margin: 5px;
-        border: 2px solid #7d99b1;
-        ;
-        ;
-        border-radius: 5px;
+    .boxesrow p {
+        top: 10px;
     }
-    
-    form .submit {
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 170px;
+        width: 255px;
+    }
+    .skills-grid {
+        grid-template-columns: auto;
+    }
+    .skills-grid ul {
+        padding-inline-start: 0px;
+    }
+    .front-end,
+    .back-end {
         text-align: center;
     }
-    
+    .skills .contact-me {
+        margin-bottom: 10px;
+    }
+    /* ------------- */
     footer {
-        background-color: #7d99b1;
-        ;
-        /* opacity: 97%; */
-        padding: 0.5%;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20;
-        position: fixed;
-        width: 100vw;
-        bottom: 0;
+        position: static;
     }
-    /* pseudo classes */
-    
-    .navigation :hover {
-        background-color: #e3b674;
-        border-radius: 30em;
+}
+
+@media screen and (max-width: 600px) {
+    div p,
+    div ul li,
+    {
+        font-size: 13px;
     }
-    
-    .project-text :hover {
-        /* display: block; */
+    header {
+        position: static;
     }
-    
-    .boxesrow p :hover {
-        background-color: #e3b674;
-        border-radius: 5em;
+    #about-me,
+    #contact-me,
+    #projects,
+    #skills {
+        scroll-margin-top: 5px;
     }
-    
-    .icons-bar a :hover {
-        transform: scale(1.2);
+    header ul {
+        white-space: normal;
+        display: block;
+        padding: 5px
     }
-    /* media queries */
-    
-    @media (pointer:coarse) {
-        main {
-            overflow-x: scroll;
-            /* could also do hidden... not sure */
-        }
+    header ul li {
+        display: block;
+        font-size: 14px;
     }
-    
-    @media screen and (max-width: 1375px) {
-        #leftboxtop,
-        #leftboxbottom,
-        #rightboxtop,
-        #rightboxbottom {
-            height: 210px;
-            width: 315px;
-        }
+    main {
+        margin-top: auto;
     }
-    
-    @media screen and (max-height: 780px) {
-        #leftboxtop,
-        #leftboxbottom,
-        #rightboxtop,
-        #rightboxbottom {
-            height: 170px;
-            width: 255px;
-        }
-        .projects-box {
-            font-size: 12px;
-        }
+    .about-me-grid div img {
+        width: 200px;
+        height: 200px;
     }
-    
-    @media screen and (max-height: 630px) {
-        .about-me p {
-            font-size: 13px;
-        }
-    }
-    
-    @media screen and (max-width: 950px) {
-        .mainblock {
-            font-size: 14px;
-        }
-        h2 {
-            font-size: 20px;
-        }
-        #leftboxtop,
-        #leftboxbottom,
-        #rightboxtop,
-        #rightboxbottom {
-            height: 180px;
-            width: 270px;
-        }
-    }
-    
-    @media screen and (max-width: 800px) {
-        /* !! horizontal scroll stops and page becomes vertical scroll !! */
-        /* nav bar smaller */
-        header .navigation a {
-            font-size: 16px;
-        }
-        header h1 {
-            font-size: 20px;
-        }
-        main {
-            display: block;
-            margin-top: 60px;
-        }
-        main h2 {
-            margin: 8px;
-            padding: 8px 0;
-            font-size: 20px;
-        }
-        /* height of sections disappears */
-        section div.wrappertop {
-            height: 100%;
-        }
-        .about-me-grid {
-            display: grid;
-            grid-template-columns: auto;
-            text-align: center;
-            margin: 0% 10%
-        }
-        /* icon bar arrows disappear */
-        .icons-bar li.left,
-        .icons-bar li.right {
-            display: none;
-        }
-        .about-me .icons-bar,
-        .contact-me .icons-bar {
-            display: none;
-        }
-        /* ---------- */
-        /* project pictures stack vertically */
-        .projects-box {
-            font-size: 12px;
-        }
-        .boxesrow {
-            display: inline-block;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            padding: 0px;
-        }
-        .boxesrow p {
-            top: 10px;
-        }
-        #leftboxtop,
-        #leftboxbottom,
-        #rightboxtop,
-        #rightboxbottom {
-            height: 170px;
-            width: 255px;
-        }
-        .skills-grid {
-            grid-template-columns: auto;
-        }
-        .skills-grid ul {
-            padding-inline-start: 0px;
-        }
-        .front-end,
-        .back-end {
-            text-align: center;
-        }
-        .skills .contact-me {
-            margin-bottom: 10px;
-        }
-        /* ------------- */
-        footer {
-            position: static;
-        }
-    }
-    
-    @media screen and (max-width: 600px) {
-        div p,
-        div ul li,
-        {
-            font-size: 13px;
-        }
-        header {
-            position: static;
-        }
-        #about-me,
-        #contact-me,
-        #projects,
-        #skills {
-            scroll-margin-top: 5px;
-        }
-        header ul {
-            white-space: normal;
-            display: block;
-            padding: 5px
-        }
-        header ul li {
-            display: block;
-            font-size: 14px;
-        }
-        main {
-            margin-top: auto;
-            padding: 0 3%;
-        }
-        .about-me-grid div img {
-            width: 200px;
-            height: 200px;
-        }
-    }
+}

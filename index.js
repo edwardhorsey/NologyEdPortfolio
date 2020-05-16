@@ -11,6 +11,7 @@ document.addEventListener("keydown", e => {
 
 document.addEventListener("click", e => {
     let path = String(e.path[0]);
+    console.log(e)
     if (path.includes('#')) {
         e.preventDefault();
         let hash = path.slice(path.indexOf('#'))

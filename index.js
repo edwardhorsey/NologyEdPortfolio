@@ -13,18 +13,22 @@ document.addEventListener("keydown", e => {
     }
 });
 
-function goToPage(key) {
+const goToPage = function(key) {
     let location = document.URL;
-    let section = location.slice(location.indexOf('#') + 1)
-
+    let section;
+    if (!location.includes('#')) { section = 'about-me' } else {
+        section = location.slice(location.indexOf('#') + 1)
+    }
     let left = document.querySelector(`.${section} .icons-bar .left a`)
     let right = document.querySelector(`.${section} .icons-bar .right a`)
+    if (key.keyCode === 39) {
 
-    console.log(left, right)
+        return right.click()
 
-    if (key.keyCode === 39) { return right.click() }
+
+
+    }
     if (key.keyCode === 37) { return left.click() }
-
 }
 
 // contact form thanks

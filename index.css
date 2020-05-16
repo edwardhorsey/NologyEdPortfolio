@@ -10,7 +10,7 @@ li {
 
 html,
 body {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     margin: 0px;
     padding: 0px;
 }
@@ -42,7 +42,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     grid-template-columns: auto auto;
     background-color: white;
 }
@@ -235,6 +235,10 @@ form .submit {
     text-align: center;
 }
 
+#thanks {
+    color: green;
+}
+
 footer {
     background-color: #7d99b1;
     padding: 0.5%;
@@ -299,10 +303,19 @@ footer {
 
 /* media queries */
 
+@media (pointer:none) {
+    .boxesrow p {
+        opacity: 100;
+    }
+}
+
 @media (pointer:coarse) {
     main {
         overflow-x: scroll;
         /* could also do hidden... not sure */
+    }
+    .boxesrow p {
+        opacity: 100;
     }
 }
 
@@ -405,6 +418,9 @@ footer {
     }
     /* ---------- */
     /* project pictures stack vertically */
+    .boxesrow p {
+        opacity: 100;
+    }
     .projects-box {
         font-size: 12px;
     }

@@ -527,3 +527,13 @@ footer {
         height: 200px;
     }
 }
+
+@media screen and (max-width: 360px) {
+    #leftboxtop,
+    #leftboxbottom,
+    #rightboxtop,
+    #rightboxbottom {
+        height: 136px;
+        width: 204px;
+    }
+}

@@ -488,8 +488,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     div p,
-    div ul li,
-    {
+    div ul li {
         font-size: 13px;
     }
     header {

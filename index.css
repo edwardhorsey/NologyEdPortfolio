@@ -272,8 +272,12 @@ footer {
 .navigation li :hover {
     background-color: #e3b674;
     border-radius: 30em;
-    -webkit-animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: fade-in 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#burger :hover {
+    background-color: white;
 }
 
 #leftboxtop :hover,

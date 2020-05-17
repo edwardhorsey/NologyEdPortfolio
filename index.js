@@ -26,8 +26,6 @@ document.addEventListener("click", e => {
     if (String(e.path[1]).includes('#')) {
         path = String(e.path[1])
     }
-    // console.log(e)
-    // console.log(path)
     if (path && path.includes('#')) {
         e.preventDefault();
         let hash = path.slice(path.indexOf('#'))

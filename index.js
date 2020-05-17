@@ -1,6 +1,15 @@
 //jquery
 
+$('#checkbox').change(function() {
+    if ($(this).is(':checked')) {
+        $('#pages').toggleClass('pages')
+    } else {
+        $('#pages').toggleClass('pages');
+    }
+});
+
 // arrow keys to navigate
+
 
 document.addEventListener("keydown", e => {
     if (e.keyCode === 37 || e.keyCode === 39) {
@@ -17,9 +26,9 @@ document.addEventListener("click", e => {
     if (String(e.path[1]).includes('#')) {
         path = String(e.path[1])
     }
-    console.log(e)
-    console.log(path)
-    if (path.includes('#')) {
+    // console.log(e)
+    // console.log(path)
+    if (path && path.includes('#')) {
         e.preventDefault();
         let hash = path.slice(path.indexOf('#'))
         document.querySelector(`${hash}`).scrollIntoView({
@@ -54,7 +63,6 @@ const goToPage = function(key) {
 }
 
 // contact form thanks
-
 
 const thanks = () => {
     let para = document.getElementById('thanks');

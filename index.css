@@ -77,6 +77,14 @@ header h1 {
     margin: 20px;
 }
 
+#burger {
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+
 .centerbody {
     width: 100vw;
 }
@@ -357,6 +365,9 @@ footer {
     .about-me p {
         font-size: 13px;
     }
+    footer {
+        position: static
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -489,6 +500,15 @@ footer {
     #projects,
     #skills {
         scroll-margin-top: 5px;
+    }
+    #burger {
+        display: block;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 0px;
+    }
+    .pages {
+        display: none;
     }
     header ul {
         white-space: normal;

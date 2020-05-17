@@ -1,4 +1,8 @@
-/* first commit */
+/**
+ * ----------------------------------------
+ * Defaults
+ * ----------------------------------------
+ */
 
 h1,
 h2,
@@ -10,13 +14,16 @@ li {
 
 html,
 body {
-    /* scroll-behavior: smooth; */
     margin: 0px;
     padding: 0px;
 }
 
 
-/* main CSS */
+/**
+ * ----------------------------------------
+ * main CSS
+ * ----------------------------------------
+ */
 
 .mainblock {
     margin: 0px;
@@ -39,10 +46,9 @@ body {
 
 header {
     display: grid;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100vw;
-    /* overflow: hidden; */
     grid-template-columns: auto auto;
     background-color: white;
 }
@@ -56,11 +62,11 @@ header ul {
 
 header li {
     display: inline;
-    padding: 10px;
     font-size: 20px;
 }
 
 header li a {
+    padding: 10px;
     text-decoration: none;
     color: black;
 }
@@ -180,31 +186,6 @@ section div.wrappertop {
     font-size: 1.2em;
 }
 
-.icons-bar ul {
-    white-space: nowrap;
-    margin: 0 auto;
-    padding: 8px;
-    margin: 8px;
-}
-
-.icons-bar li {
-    width: 33%;
-    display: inline-block;
-    font-size: 20px;
-}
-
-.icons-bar li.left {
-    text-align: left;
-}
-
-.icons-bar li.center {
-    text-align: center;
-}
-
-.icons-bar li.right {
-    text-align: right;
-}
-
 .skills li {
     list-style-type: none;
 }
@@ -235,6 +216,31 @@ form .submit {
     text-align: center;
 }
 
+.icons-bar ul {
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 8px;
+    margin: 8px;
+}
+
+.icons-bar li {
+    width: 33%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.icons-bar li.left {
+    text-align: left;
+}
+
+.icons-bar li.center {
+    text-align: center;
+}
+
+.icons-bar li.right {
+    text-align: right;
+}
+
 #thanks {
     color: green;
 }
@@ -249,9 +255,13 @@ footer {
 }
 
 
-/* pseudo classes */
+/**
+ * ----------------------------------------
+ * pseudo classes
+ * ----------------------------------------
+ */
 
-.navigation :hover {
+.navigation li :hover {
     background-color: #e3b674;
     border-radius: 30em;
     -webkit-animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -301,22 +311,20 @@ footer {
 }
 
 
-/* media queries */
-
-@media (pointer:none) {
-    .boxesrow p {
-        opacity: 100;
-    }
-}
+/**
+ * ----------------------------------------
+ * media queries
+ * ----------------------------------------
+ */
 
 @media (pointer:coarse) {
     main {
         overflow-x: scroll;
         /* could also do hidden... not sure */
     }
-    .boxesrow p {
+    /* .boxesrow p {
         opacity: 100;
-    }
+    } */
 }
 
 @media screen and (max-width: 1375px) {
@@ -372,8 +380,12 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    /* -------------------------------------------------------------- */
     /* !! horizontal scroll stops and page becomes vertical scroll !! */
+    /* -------------------------------------------------------------- */
+    /* --------------- */
     /* nav bar smaller */
+    /* --------------- */
     body {
         background-attachment: fixed;
     }
@@ -384,7 +396,6 @@ footer {
         font-size: 20px;
     }
     header {
-        /* position fixed; */
         z-index: 101;
     }
     main {
@@ -397,7 +408,9 @@ footer {
         font-size: 20px;
         text-align: center;
     }
+    /* ----------------------------- */
     /* height of sections disappears */
+    /* ----------------------------- */
     section div.wrappertop {
         height: 100%;
     }
@@ -407,7 +420,12 @@ footer {
         text-align: center;
         margin: 0% 10%
     }
+    .about-me p {
+        font-size: 15px;
+    }
+    /* ------------------------- */
     /* icon bar arrows disappear */
+    /* ------------------------- */
     .icons-bar li.left,
     .icons-bar li.right {
         display: none;
@@ -416,11 +434,9 @@ footer {
     .contact-me .icons-bar {
         display: none;
     }
-    /* ---------- */
+    /* --------------------------------- */
     /* project pictures stack vertically */
-    .boxesrow p {
-        opacity: 100;
-    }
+    /* --------------------------------- */
     .projects-box {
         font-size: 12px;
     }
@@ -454,7 +470,6 @@ footer {
     section#contact-me {
         margin-bottom: 10px;
     }
-    /* ------------- */
     footer {
         position: static;
     }
@@ -483,6 +498,7 @@ footer {
     header ul li {
         display: block;
         font-size: 14px;
+        padding: 10px;
     }
     main {
         margin-top: auto;

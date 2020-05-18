@@ -20,6 +20,8 @@ document.addEventListener("keydown", e => {
 
 document.addEventListener("click", e => {
     let path;
+    console.log(e);
+    console.log(e.page)
     if (String(e.path[0]).includes('#')) {
         path = String(e.path[0])
     }
@@ -32,6 +34,7 @@ document.addEventListener("click", e => {
         document.querySelector(`${hash}`).scrollIntoView({
             behavior: 'smooth'
         });
+        console.log(hash);
         history.pushState({
                 id: hash
             },
@@ -48,7 +51,7 @@ document.addEventListener("click", e => {
 
 const goToPage = function(key) {
     let location = document.URL;
-    let section;
+    let section; // to know which section we're in
     if (!location.includes('#')) { section = 'about-me' } else {
         section = location.slice(location.indexOf('#') + 1)
     }

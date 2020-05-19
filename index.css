@@ -532,12 +532,15 @@ footer {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
     #leftboxtop,
     #leftboxbottom,
     #rightboxtop,
     #rightboxbottom {
         height: 136px;
         width: 204px;
+    }
+    .projects-box {
+        font-size: 10px;
     }
 }
